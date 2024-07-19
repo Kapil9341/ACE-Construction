@@ -1,0 +1,47 @@
+<!-- project_detail.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+    .card {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        overflow: hidden; /* Ensures images stay within card boundaries */
+    }
+
+    .card-img-top {
+        width: 100%;
+        height: 200px; /* Set a fixed height for uniformity */
+        object-fit: cover; /* Ensures the image covers the entire space */
+    }
+</style>
+
+
+<div class="container">
+    <h1 class="mb-4 text-center">{{ project.title }} Details</h1>
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <h2>Images</h2>
+            <div class="row">
+                {% for detail in project_details %}
+                {% for image in detail.images.all %}
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="{{ image.image.url }}" alt="{{ project.title }} Image" class="card-img-top img-fluid">
+                    </div>
+                </div>
+                {% endfor %}
+                {% endfor %}
+            </div>
+        </div>
+        <div class="col-md-6 mb-4">
+            <h2>Details</h2>
+            {% for detail in project_details %}
+            <h4>{{ detail.area }}</h4>
+            <p>{{ detail.date }}</p>
+            <p>{{ detail.project_detail }}</p>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

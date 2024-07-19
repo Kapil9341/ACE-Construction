@@ -1,0 +1,74 @@
+{% extends 'base.html' %}  {# Assuming you have a base template #}
+{% load static %}
+{% block content %}
+<div class="container">
+    <div>
+        <h1 class="text-center my-4">About Us</h1>
+    </div>
+    <div class="row">
+        <!-- Left side: Image and Founder details -->
+        <div class="col-md-6 mb-3">
+            <div class="card">
+                <img src="{% static 'img/ACE_logo.jpg' %}" class="card-img-top" alt="ACE Logo">
+
+            </div>
+            <div class="card-body">
+                <h5 class="card-title text-left">FOUNDER</h5>
+                <p class="card-text text-left">ABHISHEK RAJPUT</p>
+            </div>
+        </div>
+        <!-- Right side: About Us content -->
+        <div class="col-md-6">
+
+            <div class="col-lg-12">
+                <h2>ACE Construction at a glance...</h2>
+                <div class="our-story">
+                    <h3>Company Profile</h3>
+                    <p>
+                        The Company, ACE Construction, Constituent of the ACE Construction was incorporated in 2020.
+                        The Company is engaged in the business of providing Engineering
+                        and Construction (E&C) services for infrastructure sectors.
+                        The Company is also engaged in implementation,
+                        operation and maintenance of several projects in
+                        infrastructural areas.
+                    </p>
+                    <h3>Our Mission</h3>
+                    <p>
+                        Our achievements are a testimony to our mission of attaining excellence
+                        in infrastructure. The following ideas form the cornerstone of our endeavor
+                        to realize our goal:
+                    </p>
+                    <ul>
+                        <li>
+                            <i class="bi bi-check-circle"></i>
+                            <span>To attain global best practices and become a world-class utility</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle"></i>
+                            <span>To create world-class assets and infrastructure to provide the platform for faster,
+                            consistent growth for India to become a major world economic power</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle"></i>
+                            <span>To achieve excellence in service, quality, reliability, safety and customer care</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle"></i>
+                            <span>To earn the trust and confidence of all customers and stakeholders,
+                            exceeding their expectations and make the Company a respected household name</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle"></i>
+                            <span>To work with vigour, dedication and innovation with total customer satisfaction as the ultimate goal</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle"></i>
+                            <span>To consistently achieve high growth with the highest levels of productivity</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
