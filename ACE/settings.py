@@ -74,22 +74,22 @@ WSGI_APPLICATION = 'ACE.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
-
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'HOST': 'localhost',
-#         'USER': 'ace',
-#         'PASSWORD': 'ace@123!!',
-#         'NAME': 'acedb',
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
 # }
-# }
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'HOST': '142.93.217.104',
+        'USER': 'ace',
+        'PASSWORD': 'ACE@123!!@123',
+        'NAME': 'ACEdb',
+}
+}
 
 
 # Password validation
