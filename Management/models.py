@@ -1,6 +1,6 @@
 from django.db import models
-
-
+import re
+from django.core.exceptions import ValidationError
 # Create your models here.
 
 class IndexDetail(models.Model):
@@ -70,9 +70,14 @@ class CarrerDetail(models.Model):
     name = models.CharField(max_length=200)
     email = models.EmailField()
     subject = models.CharField(max_length=200)
-    mobile = models.IntegerField()
+    mobile = models.CharField(max_length=15)
     resume = models.FileField(upload_to='resumes/')
     photo = models.ImageField(upload_to='resume/photo/')
+
+    def clean(self):
+        super().clean()
+        if not re.match(r'^\d+$', self.mobile):
+            raise ValidationError({'mobile': 'Mobile number must contain only digits.'})
 
     def __str__(self):
         return f"{self.name}'-'{self.subject}-{self.mobile}"
