@@ -23,6 +23,21 @@
             <p>Mobile: +91 7067915733, +91 7089096520</p>
             <p>EMAIL</p>
             <p>Office: <a href="mailto:info@aceconstructions.com">info@aceconstructions.com</a>, <a href="mailto:career@aceconstructions.com">career@aceconstructions.com</a></p>
+            <div class="social-link">
+                <a href="#"><i class="fab fa-pinterest"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+            <style>
+                .social-link {
+                    display: flex;
+                    gap: 20px; /* Adjust the gap between icons as needed */
+                }
+                .social-link a {
+                    text-decoration: none;
+                    font-size: 20px; /* Adjust the size of icons as needed */
+                }
+            </style>
         </div>
         <div class="col-md-6">
             <form action="{% url 'contact' %}" method="POST">
