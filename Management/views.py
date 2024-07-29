@@ -70,6 +70,8 @@ class AboutView(ListView):
 
 class ThankyouView(TemplateView):
     template_name = 'thank_you.html'
+
+    
 class ContactView(TemplateView):
     template_name = 'contact.html'
     model = ContactDetail
